@@ -14,7 +14,7 @@ L = DMLMJ(XTr, YTr, )
 
 ## Acknowledgments
 If you find this code useful in your research, please consider citing:
-
+``` bibtex
 @Article{Nguyen2016,
   Title       = {Supervised distance metric learning through maximization of the {J}effrey divergence},
   Author      = {Bac Nguyen and Carlos Morell and De Baets, Bernard},
@@ -23,4 +23,4 @@ If you find this code useful in your research, please consider citing:
   Pages       = {215-225},
   Volume      = {64}
 }
-
+```
