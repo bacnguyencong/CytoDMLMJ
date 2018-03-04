@@ -21,7 +21,7 @@ First we need to learn a linear transformation from supervised data
    * .knn    (Number of neighbors, default = 5)
    * .dim    (Desired number of dimensionality, default = cross-validation)
 
-Once we have learned $L$, we can use it for unsupervised data
+Once we have learned $$L$$, we can use it for unsupervised data
 ```matlab
 >> X = L'*X;
 ```
