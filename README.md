@@ -2,6 +2,6 @@
 
 ## Authors
 
-* **Bac Nguyen** [https://github.com/kunkun220189]
+* [Bac Nguyen](https://github.com/kunkun220189)
 
 ## Acknowledgments
