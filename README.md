@@ -10,6 +10,10 @@ Download the folder "DMLMJ" into the directory of your choice. Then within MATLA
 ## Usage
 First we need to learn a linear transformation from supervised data
 ```matlab
+params = struct();
+params.kernel = 0;
+params.knn = 5;
+params.dim = 10;
 >> L = DMLMJ(XTr, YTr, params)
 ```
 ### Parameters
