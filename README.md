@@ -4,9 +4,26 @@ We consider the use of distance metric learning for analyzing single-cell inform
 ### Prerequisites
 This has been tested using MATLAB 2010A and later on Windows and Linux (Mac should be fine).
 
-## How to use?
+## Installation
+Download the folder "DMLMJ" into the directory of your choice. Then within MATLAB go to file >> Set path... and add the directory containing "DMLMJ" to the list (if it isn't already). That's it.
+
+## Usage
+First we need to learn a linear transformation from supervised data
 ```matlab
-L = DMLMJ(XTr, YTr, )
+>> L = DMLMJ(XTr, YTr, params)
+```
+### Parameters
+* XTr: Training examples (d x n, where d is the number of features and n is the number of examples)
+* YTr: Training labels   (n x 1)
+* params (optional): 
+   * .kernel (If set to 1, a kerned method is applied, default = 0)
+   * .ker    (Kernel type: 'rbf' or 'poly' will be applied, default = 'rbf')
+   * .knn    (Number of neighbors, default = 5)
+   * .dim    (Desired number of dimensionality, default = cross-validation)
+
+Once we have learned $L$, we can use it for unsupervised data
+```matlab
+>> X = L'*X;
 ```
 ## Authors
 
