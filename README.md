@@ -33,7 +33,7 @@ Once we have learned L, we can use it for unsupervised data
 ```
 ## Authors
 
-* [Bac Nguyen](https://github.com/kunkun220189)
+* [Bac Nguyen](https://github.com/bacnguyencong)
 
 ## Acknowledgments
 If you find this code useful in your research, please consider citing:
