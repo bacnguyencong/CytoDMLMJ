@@ -34,6 +34,7 @@ Once we have learned L, we can use it for unsupervised data
 ## Authors
 
 * [Bac Nguyen](https://github.com/bacnguyencong)
+* [Peter Rubbens](https://github.com/prubbens)
 
 ## Acknowledgments
 If you find this code useful in your research, please consider citing:
