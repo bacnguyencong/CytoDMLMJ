@@ -1,4 +1,4 @@
-# Distance metric learning for synthetic microbial ecology studies using flow cytometry
+# Distance Metric Learning for Single-Cell Data Analysis
 We consider the use of distance metric learning for analyzing single-cell information coming from flow cytometry for synthetic microbiology studies.
 <p align="center">
   <img src="./figs/supervised_raw-1.png" width="300"/>
@@ -8,6 +8,7 @@ We consider the use of distance metric learning for analyzing single-cell inform
 ### Prerequisites
 This has been tested using MATLAB 2010A and later on Windows and Linux (Mac should be fine).
 
+## Data Accessibility
 ## Installation
 Download the folder "DMLMJ" into the directory of your choice. Then within MATLAB go to file >> Set path... and add the directory containing "DMLMJ" to the list (if it isn't already). That's it.
 
