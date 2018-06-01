@@ -1,9 +1,19 @@
 # Distance Metric Learning for Single-Cell Data Analysis
 We consider the use of distance metric learning for analyzing single-cell information coming from flow cytometry for synthetic microbiology studies.
+
 <p align="center">
   <img src="./figs/supervised_raw-1.png" width="300"/>
   <img src="./figs/supervised_asinh-1.png" width="300"/>
 </p>
+
+<p align="center">
+  <img src="./figs/TSNE_32_1_test.png" width="300"/>
+</p>
+
+<p align="center">
+  <img src="./figs/TSNE_32_2_test.png" width="300"/>
+</p>
+
 
 ### Prerequisites
 This has been tested using MATLAB 2010A and later on Windows and Linux (Mac should be fine).
