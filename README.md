@@ -7,11 +7,15 @@ We consider the use of distance metric learning for analyzing single-cell inform
 </p>
 
 <p align="center">
-  <img src="./figs/TSNE_32_1_test.png" width="300"/>
+  <img src="./figs/TSNE_13_test.png" width="700"/>
 </p>
 
 <p align="center">
-  <img src="./figs/TSNE_32_2_test.png" width="300"/>
+  <img src="./figs/TSNE_32_1_test.png" width="700"/>
+</p>
+
+<p align="center">
+  <img src="./figs/TSNE_32_2_test.png" width="700"/>
 </p>
 
 
