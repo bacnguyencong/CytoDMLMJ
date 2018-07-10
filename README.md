@@ -1,4 +1,4 @@
-# Distance Metric Learning for Single-Cell Data Analysis
+# Learning Single-Cell Distances from Cytometry Data
 We consider the use of distance metric learning for analyzing single-cell information coming from flow cytometry for synthetic microbiology studies.
 
 <p align="center">
