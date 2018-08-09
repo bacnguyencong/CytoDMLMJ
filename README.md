@@ -1,7 +1,7 @@
 # Learning Single-Cell Distances from Cytometry Data
-This repository accompanies the manscript "*Learning Single-Cell Distances from Cytometry Data*" by [B. Nguyen](https://github.com/bacnguyencong), [P. Rubbens](https://github.com/prubbens), F.-M. Kerckhof, N. Boon, B. De Baets and W. Waegeman. 
+This repository accompanies the manscript "*Learning Single-Cell Distances from Cytometry Data*" by [B. Nguyen](https://github.com/bacnguyencong), [P. Rubbens](https://github.com/prubbens), [F.-M. Kerckhof](https://github.com/FMKerckhof), N. Boon, B. De Baets and W. Waegeman. 
 
-It explores the functionality of distance metric learning through maximization of the Jeffrey divergence (DMLMJ) for different cytometry applications (synthetic microbial communities and CyTOF). 
+It explores the functionality of distance metric learning through maximization of the Jeffrey divergence (DMLMJ) for different cytometry applications (synthetic microbial ecology and CyTOF). 
 
 ## ABSTRACT: 
 Data analysis techniques for the automated identification of cell populations are witnessing an increased interest in the field of cytometry. These techniques commonly depend on a distance metric to measure similarities between single cells. In this study, we explore the use of distance metric learning to automatically determine a generalized form of the Euclidean distance metric, the so-called Mahalanobis distance metric. This approach can be used in cases where single-cell labels are available. We evaluate the potential of a learned distance metric in various ways. First, we show that current distance-based methods can be improved upon by implementing an appropriate Mahalanobis distance metric. Then, to evaluate the robustness of such a distance metric, we evaluate the transferability of a Mahalanobis distance metric between samples.  In addition, we show that a learned distance metric can be integrated with unsupervised methods, such as clustering or dimensionality reduction. In particular, the approach is illustrated for cytometry data from two different origins, i.e.\ flow cytometry applied to microbial cells and mass cytometry for the analysis of human blood cells. Results indicate that a learned distance metric improves cell population identification. It is a robust property of a specific cytometry setup, meaning that a learned distance metric can be transferred between samples. Therefore, it can provide a useful way to incorporate domain knowledge into a downstream multivariate analysis and address sources of variability to some extent. 
@@ -20,7 +20,7 @@ Links are to original publications:
 * [Levine_32dim](https://www.cell.com/cell/abstract/S0092-8674(15)00637-6) data used as presented by the benchmark study by [Weber et al. 2016](https://onlinelibrary.wiley.com/doi/abs/10.1002/cyto.a.23030) (FlowRepository ID: FR-FCM-ZZPH). 
 
 ## Example on CyTOF data: 
-DMLMJ can be used to find an optimal form of the Mahalanobis distance metric, which is a generalization of the commonly used Euclidean distance metric. The influence of DMLMJ on downstream multivariate analysis using t-SNE can be checked. Below an example is given for the Levine_13dim dataset, to which t-SNE was applied in Euclidean and DMLMJ-transformed space. 
+DMLMJ can be used to find an optimal form of the Mahalanobis distance metric, which is a generalization of the commonly used Euclidean distance metric. The influence of DMLMJ on downstream multivariate analysis using t-SNE can be checked. Below an example is given for the Levine_13dim dataset, to which t-SNE was applied in Euclidean (left) and DMLMJ-transformed (right) space. 
 
 <p align="center">
   <img src="./figs/TSNE_13_test.png" width="700"/>
@@ -57,7 +57,7 @@ Once we have learned L, we can use it for unsupervised data
 ```
 
 ## Acknowledgements
-If you find our study interesting, please consider citing: 
+If you find our study for single-cell data interesting, please consider citing: 
 ``` bibtex
 @Article{Nguyen2018,
   Title       = {Learning Single-Cell Distances from Cytometry Data},
@@ -67,7 +67,7 @@ If you find our study interesting, please consider citing:
 }
 ```
 
-DMLMJ has been published as a method as such. If you find this code useful in your research, please consider citing:
+DMLMJ has been published as a method as such. If you find the code useful in your research, please consider citing:
 ``` bibtex
 @Article{Nguyen2016,
   Title       = {Supervised distance metric learning through maximization of the {J}effrey divergence},
