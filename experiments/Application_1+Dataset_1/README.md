@@ -17,7 +17,7 @@ We report the accuracies of the `k`-NN classifier using the Euclidean and the Ma
 - ``supervised.txt``: This corresponds the supervised settings. Each row represents the results with respect to different values of the species richness ``S``, which is increased from 2 to 10.
 
 - ``partialsupervised.txt``: This corresponds the partial transfer DMLMJ settings. DMLMJ was applied at every step using the community that was only partially present in
-the target community (10 microbial populations). Each row represents the results with respect to different values of $T$ (number of microbial populations that was used to perform DMLMJ), which is increased from 2 to 10.
+the target community (10 microbial populations). Each row represents the results with respect to different values of ``T`` (number of microbial populations that was used to perform DMLMJ), which is increased from 2 to 10.
 - ``unsupervised.txt``: This corresponds the transfer DMLMJ settings. DMLMJ was applied using microbial populations of which none were part of the target communities. As the target communities contained ten bacterial populations, the remaining populations were used to determine the distance metric through DMLMJ for ``T`` from 2 to 10.
 
 We repeat the experiment 10 times to avoid the effect of randomness (in total 90 rows for each file).
@@ -32,3 +32,4 @@ In the folder ``output``, the following files will be generated
 - ``asinh_unsupervised.txt``: This corresponds the transfer DMLMJ settings.
 
 All files have the same structure as in ``Experiments on the raw data``.
+
