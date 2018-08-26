@@ -1,7 +1,4 @@
 function [XTr, XTe] = normalizer(XTr, XTe)
-end
-
-function [XTr, XTe] = normalizer1(XTr, XTe)
 %% Normalize data so that std=1 and m=0
 % INPUT
 %   XTr: (d x n) training examples

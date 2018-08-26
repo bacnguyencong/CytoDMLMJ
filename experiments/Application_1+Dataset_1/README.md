@@ -22,7 +22,7 @@ the target community (10 microbial populations). Each row represents the results
 
 We repeat the experiment 10 times to avoid the effect of randomness (in total 90 rows for each file).
 ##### 2. Experiments on the transformed data
-The results of $k$-NN classification on data transformed by ``f(x)=\text{asinh}(x)``. Within the Malab console, run the following command
+The results of ``k``-NN classification on data transformed by ``f(x)=asinh(x)``. Within the Malab console, run the following command
 ```matlab
 runExps(1)
 ```
