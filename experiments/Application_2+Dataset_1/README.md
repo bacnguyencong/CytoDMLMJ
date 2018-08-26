@@ -6,6 +6,7 @@ Data originate from one healthy individual, in which bone marrow mast cells (BMM
 The data can be found in the folder ``experiments/Application_2+Dataset_1/data/``.
 The results can be found in the folder ``experiments/Application_2+Dataset_1/output/``
 ### Usage
+#### 1. Run experiments
 within the Malab console, go to ``experiments/Application_2+Dataset_1/`` by
 ```matlab
 cd experiments/Application_2+Dataset_1/
@@ -13,6 +14,13 @@ cd experiments/Application_2+Dataset_1/
 and run the command
 ```matlab
 runExps()
+```
+#### 2. t-SNE
+Use the following code for t-SNE
+```python
+import matplotlib.pyplot as plt
+from sklearn.manifold import TSNE
+# write python code here...
 ```
 ### References
 [1] Weber, Lukas M., and Mark D. Robinson. "Comparison of clustering methods for high‐dimensional single‐cell flow and mass cytometry data." Cytometry Part A 89.12 (2016): 1084-1096.
