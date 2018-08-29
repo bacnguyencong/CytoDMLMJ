@@ -45,9 +45,9 @@ L = DMLMJ(X_train, Y_train, params);
 E_Y_hat = knnClassifier(X_train, Y_train, 3, X_test);
 
 % knn classification using DMLMJ
-M_Y_hat = knnClassifier(L'*X_train,Y_train, 3, L'*X_test);
-fprintf('Supervised settings\n');
 fprintf('Classification accuracies of k-nearest-neighbor using\n');
+M_Y_hat = knnClassifier(L'*X_train,Y_train, 3, L'*X_test);
+fprintf('1) Supervised settings:\n');
 fprintf('Euclidean = %.2f\n', mean(E_Y_hat==Y_test)*100);
 fprintf('DMLMJ = %.2f\n\n', mean(M_Y_hat==Y_test)*100);
 
@@ -57,7 +57,7 @@ fprintf('DMLMJ = %.2f\n\n', mean(M_Y_hat==Y_test)*100);
 target_populations = [23, 13];
 X = []; Y = [];
 X_te = []; Y_te = [];
-for p = populations,
+for p = target_populations,
     [XTr, YTr, XTe, YTe] = getCommunity(p);
     X = [X XTr];
     Y = [Y; YTr];
@@ -71,20 +71,20 @@ E_Y_hat = knnClassifier(X, Y, 3, X_te);
 
 % knn classification using DMLMJ
 M_Y_hat = knnClassifier(L'*X, Y, 3, L'*X_te);
-fprintf('Transfer settings\n');
-fprintf('Classification accuracies of k-nearest-neighbor using\n');
-fprintf('Euclidean = %.2f\n', mean(E_Y_hat==Y_test)*100);
-fprintf('DMLMJ = %.2f\n', mean(M_Y_hat==Y_test)*100);
+fprintf('2) Transfer settings:\n');
+fprintf('Euclidean = %.2f\n', mean(E_Y_hat==Y_te)*100);
+fprintf('DMLMJ = %.2f\n', mean(M_Y_hat==Y_te)*100);
 ```
+The output
 ```
 Classification accuracies of k-nearest-neighbor using
 1) Supervised settings:
-Euclidean = 67.02
-DMLMJ = 83.89
+Euclidean = 66.37
+DMLMJ = 84.00
 
 2) Transfer settings:
-Euclidean = 66.87
-DMLMJ = 83.58
+Euclidean = 93.79
+DMLMJ = 98.61
 ```
 
 ##### 1. Experiments on the raw data
