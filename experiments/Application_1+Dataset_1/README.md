@@ -33,3 +33,5 @@ In the folder ``output``, the following files will be generated
 
 All files have the same structure as in ``Experiments on the raw data``.
 
+#### 3. Making figures
+The python script to make Fig. 1(a) can be found from [here](make_figure.py)
