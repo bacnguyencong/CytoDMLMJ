@@ -15,6 +15,12 @@ and run the command
 ```matlab
 runExps()
 ```
+The ``output`` folder contains two folders ``Euclidean`` and ``DMLMJ``, which are the output files of `k`-NN classifier using the Euclidean and DMLMJ, respectively. 
+- ``train.txt``:  The training data set (the last column corresponds to the labels). For DMLMJ, the data are transformed using the learned transformation ``L``.
+- ``test.txt``: The test data set (the last column corresponds to the labels). For DMLMJ, the data are transformed using the learned transformation ``L``.
+- ``prediction.txt``: A file contains two columns that represent the predicted labels and the true labels, respectively.
+- ``train_all.txt``: The training data set after applying the linear transformation learned by DMLMJ (all variables are kept).
+- ``test_all.txt``: The test data set after applying the linear transformation learned by DMLMJ (all variables are kept).
 #### 2. t-SNE
 Use the following code for t-SNE
 ```python

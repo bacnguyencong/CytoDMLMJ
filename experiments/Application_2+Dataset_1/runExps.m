@@ -1,7 +1,6 @@
 function runExps()
 % Application 2: Mass Cytometry
 % Dataset 1: 13-dimensional CyTOF Data
-
     % setup paths
     setup();
     [XTr, YTr, XTe, YTe] = load_data();
@@ -29,6 +28,8 @@ function [XTr, YTr, XTe, YTe] = load_data()
     data = data.data;
     XTe = data(:,2:end-1)'; % the first column are indices
     YTe = data(:,end);
+    
+    [XTr, XTe] = normalizer(XTr, XTe);
 end
 
 function runEuclidean(XTr, YTr, XTe, YTe, saved_output)
@@ -37,7 +38,6 @@ function runEuclidean(XTr, YTr, XTe, YTe, saved_output)
     min_k = 1;
     max_k = 21;
     
-    [XTr, XTe] = normalizer(XTr, XTe);
     % cross validation for k
     COV = cvpartition(YTr,'holdout', 0.3);
     xtr = XTr(:,COV.training); ytr = YTr(COV.training);
@@ -69,9 +69,10 @@ function runEuclidean(XTr, YTr, XTe, YTe, saved_output)
         % save the output
         train_file = [newSubFolder  sprintf('train.txt')];
         test_file = [newSubFolder  sprintf('test.txt')];
-
+        
         csvwrite(train_file, [XTr' YTr]);
         csvwrite(test_file, [XTe' YTe]);
+        csvwrite([newSubFolder sprintf('prediction.txt')], [Y_hat, YTe]);
     end
 end
 
@@ -83,7 +84,6 @@ function runDMLMJ(XTr, YTr, XTe, YTe, saved_output)
     min_k = 1;
     max_k = 21;
     
-    [XTr, XTe] = normalizer(XTr, XTe);
     % cross-validation for k
     c   = cvpartition(YTr,'holdout', 0.3);
     xtr = XTr(:,c.training); ytr = YTr(c.training);
@@ -149,5 +149,6 @@ function runDMLMJ(XTr, YTr, XTe, YTe, saved_output)
         test_all_file = [newSubFolder  sprintf('test_all.txt')];
         csvwrite(train_all_file, [(L'*XTr)' YTr]);
         csvwrite(test_all_file, [(L'*XTe)' YTe]);
+        csvwrite([newSubFolder sprintf('prediction.txt')], [Y_hat, YTe]);
     end    
 end
