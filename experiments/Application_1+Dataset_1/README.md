@@ -36,12 +36,12 @@ All files have the same structure as in ``Experiments on the raw data``.
 #### 3. Making figures
 - The python script to make Fig. 1(a) can be found from [here](make_supervised_figure.py)
 <p align="center">
-  <img src="./output/output.eps" width="700"/>
+  <img src="./output/output.png" width="700"/>
 </p>
 
 - The python script to make Fig. 2(a) can be found from [here](make_transfer_figure.py)
 <p align="center">
-  <img src="./output/transfer.eps" width="700"/>
+  <img src="./output/transfer.png" width="700"/>
 </p>
 
 ```bash

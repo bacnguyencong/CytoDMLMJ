@@ -55,7 +55,7 @@ def make_join_figure(file1, file2, num=1, ylim=(40,100)):
     
     g.set(ylim=ylim)
     g.despine(offset=10, trim=True)
-    plt.savefig('output/output.eps', format='eps',bbox_inches='tight', dpi=500)
+    plt.savefig('output/output.png', format='png',bbox_inches='tight', dpi=500)
 
 if __name__ == '__main__':
     make_join_figure('supervised', 'asinh_supervised', 1, (40, 100))

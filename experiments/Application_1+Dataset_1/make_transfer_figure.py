@@ -47,7 +47,7 @@ def make_figure(file1, file2, ylim=(40,100)):
                    legend_out=False)
     ax.set(ylim=ylim)
     ax.despine(offset=10, trim=True)
-    plt.savefig('output/transfer.eps', format='eps',bbox_inches='tight', dpi=500)
+    plt.savefig('output/transfer.png', format='png',bbox_inches='tight', dpi=500)
 
 
 if __name__ == '__main__':
