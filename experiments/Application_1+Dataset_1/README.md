@@ -41,7 +41,7 @@ All files have the same structure as in ``Experiments on the raw data``.
 
 - The python script to make Fig. 2(a) can be found from [here](make_transfer_figure.py)
 <p align="center">
-  <img src="./output/transfer.png" width="700"/>
+  <img src="./output/transfer.png" width="350"/>
 </p>
 
 ```bash
