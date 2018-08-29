@@ -1,12 +1,22 @@
 function runExps()
 % Application 2: Mass Cytometry
 % Dataset 1: 13-dimensional CyTOF Data
+    
     % setup paths
     setup();
     for i=1:2,
-       [XTr, YTr, XTe, YTe] = load_data(i);
-       runEuclidean(XTr, YTr, XTe, YTe, 1, i);
-       runDMLMJ(XTr, YTr, XTe, YTe, 1, i);
+       [XTr, YTr, XTe, YTe] = load_data(num2str(i));
+       runEuclidean(XTr, YTr, XTe, YTe, 1, num2str(i));
+       runDMLMJ(XTr, YTr, XTe, YTe, 1, num2str(i));
+    end
+    
+    % run transfer settings
+    for i=1:2,
+       [XTr1, YTr1, ~, ~] = load_data(num2str(i));
+       j = 2 - (i - 1);
+       [~, ~, XTr2, YTr2] = load_data(num2str(j));             
+       runDMLMJ(XTr1, YTr1, XTr2, YTr2, 1,  [num2str(i) '.' num2str(j)]);
+       runEuclidean(XTr1, YTr1, XTr2, YTr2, 1,  [num2str(i) '.' num2str(j)]);
     end
 end
 
@@ -20,13 +30,13 @@ end
 
 function [XTr, YTr, XTe, YTe] = load_data(num)
     % load training data
-    data = importdata(['data/Levine_32dim_train_strat_patient' num2str(num) '.csv']);
+    data = importdata(['data/Levine_32dim_train_strat_patient' num '.csv']);
     data = data.data;
     XTr = data(:,2:end-1)'; % the first column are indices
     YTr = data(:,end);
     
     % load test data
-    data = importdata(['data/Levine_32dim_test_strat_patient' num2str(num) '.csv']);
+    data = importdata(['data/Levine_32dim_test_strat_patient' num '.csv']);
     data = data.data;
     XTe = data(:,2:end-1)'; % the first column are indices
     YTe = data(:,end);
@@ -69,12 +79,12 @@ function runEuclidean(XTr, YTr, XTe, YTe, saved_output, num)
             mkdir(newSubFolder);
         end
         % save the output
-        train_file = [newSubFolder  sprintf('train.txt')];
-        test_file = [newSubFolder  sprintf('test.txt')];
+        train_file = [newSubFolder  sprintf(['train.' num '.txt'])];
+        test_file = [newSubFolder  sprintf(['test.' num '.txt'])];
         
         csvwrite(train_file, [XTr' YTr]);
         csvwrite(test_file, [XTe' YTe]);
-        csvwrite([newSubFolder sprintf('prediction.txt')], [Y_hat, YTe]);
+        csvwrite([newSubFolder sprintf(['prediction.' num '.txt'])], [Y_hat, YTe]);
     end
 end
 
@@ -134,8 +144,8 @@ function runDMLMJ(XTr, YTr, XTe, YTe, saved_output, num)
         end
         
         % DMLMJ uses the set of features that provifes the best F1 score
-        train_file = [newSubFolder  sprintf('train.txt')];
-        test_file = [newSubFolder  sprintf('test.txt')];
+        train_file = [newSubFolder  sprintf(['train.' num '.txt'])];
+        test_file = [newSubFolder  sprintf(['test.' num '.txt'])];
 
         csvwrite(train_file, [(L'*XTr)' YTr]);
         csvwrite(test_file, [(L'*XTe)' YTe]);
@@ -147,10 +157,10 @@ function runDMLMJ(XTr, YTr, XTe, YTe, saved_output, num)
         params.k2 = min(10, max(best_k,5));
         L = DMLMJ(XTr, YTr, params);
 
-        train_all_file = [newSubFolder  sprintf('train_all.txt')];
-        test_all_file = [newSubFolder  sprintf('test_all.txt')];
+        train_all_file = [newSubFolder  sprintf(['train_all.' num '.txt'])];
+        test_all_file = [newSubFolder  sprintf(['test_all.' num '.txt'])];
         csvwrite(train_all_file, [(L'*XTr)' YTr]);
         csvwrite(test_all_file, [(L'*XTe)' YTe]);
-        csvwrite([newSubFolder sprintf('prediction.txt')], [Y_hat, YTe]);
+        csvwrite([newSubFolder sprintf(['prediction.' num '.txt'])], [Y_hat, YTe]);
     end    
 end
