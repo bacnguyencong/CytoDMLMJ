@@ -7,6 +7,51 @@ within the Malab console, go to ``experiments/Application_1+Dataset_1/`` by
 ```matlab
 cd experiments/Application_1+Dataset_1/
 ```
+A quick example:
+```matlab
+% configure the paths
+clear all
+addpath(genpath('helpers'));
+my_path = pwd;
+cd ../..
+addpath(genpath([pwd '/algorithms/']));
+addpath(genpath([pwd '/helps/']));
+cd(my_path);
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+populations = [5, 8];
+% build training and test sets by joining populations
+X_train = []; Y_train = [];
+X_test = []; Y_test = [];
+for p = populations,
+    [XTr, YTr, XTe, YTe] = getCommunity(p);
+    X_train = [X_train XTr];
+    Y_train = [Y_train; YTr];
+    X_test = [X_test XTe];
+    Y_test = [Y_test; YTe];
+end
+
+% configure parameters for DMLMJ
+params = struct();
+params.dim = 10; % the desired number of features in the transformed space.
+params.k1 = 5; % positive neighbors
+params.k2 = 5; % negative neighbors
+
+% learn a linear transformation using DMLMJ
+L = DMLMJ(X_train, Y_train, params);
+
+% Use k=3 to test the performance of knn and DMLMJ
+% knn classification using Euclidean
+E_Y_hat = knnClassifier(X_train, Y_train, 3, X_test);
+
+% knn classification using DMLMJ
+M_Y_hat = knnClassifier(L'*X_train,Y_train, 3, L'*X_test);
+
+fprintf('Classification accuracies of k-nearest-neighbor using\n');
+fprintf('Euclidean = %.2f\n', mean(E_Y_hat==Y_test)*100);
+fprintf('DMLMJ = %.2f\n', mean(M_Y_hat==Y_test)*100);
+
+```
 ##### 1. Experiments on the raw data
 Within the Malab console, run the following command
 ```matlab
