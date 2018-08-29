@@ -32,3 +32,18 @@ In the folder ``output``, the following files will be generated
 - ``asinh_unsupervised.txt``: This corresponds the transfer DMLMJ settings.
 
 All files have the same structure as in ``Experiments on the raw data``.
+
+#### 3. Making figures
+- The python script to make Fig. 1(b) can be found from [here](make_supervised_figure.py)
+<p align="center">
+  <img src="./output/output.png" width="700"/>
+</p>
+
+- The python script to make Fig. 2(b) can be found from [here](make_transfer_figure.py)
+<p align="center">
+  <img src="./output/transfer.png" width="350"/>
+</p>
+
+```bash
+python python_script.py
+```
