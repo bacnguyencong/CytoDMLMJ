@@ -8,7 +8,7 @@ Download the repository, open the Malab console, and within the console go to ``
 ```matlab
 cd experiments/Application_1+Dataset_1/
 ```
-Next, run the following commands:
+Next, run the following [demo](demo.m) script:
 ```matlab
 % configure the paths
 clear all

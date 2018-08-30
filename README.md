@@ -9,7 +9,7 @@ Data analysis techniques for the automated identification of cell populations ar
 ## Structure: 
 * Examples and code to reproduce the results can be found in the directory [experiments](https://github.com/bacnguyencong/CytoDMLMJ/tree/master/experiments), per application and dataset (four different directories in total). 
 * Figures of the manuscript can be found in [figs](https://github.com/bacnguyencong/CytoDMLMJ/tree/master/figs). 
-* Original code to run `DMLMJ` can be found as well in the directory [algorithms/DMLMJ](https://github.com/bacnguyencong/CytoDMLMJ/tree/master/algorithms/DMLMJ). 
+* Original codes to run `DMLMJ` can be found as well in the directory [algorithms/DMLMJ](https://github.com/bacnguyencong/CytoDMLMJ/tree/master/algorithms/DMLMJ). 
 
 ## Datasets:
 Four different datasets were used. Links and FlowRepository IDs to original publications are the following: 
