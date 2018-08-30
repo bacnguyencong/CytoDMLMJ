@@ -1,13 +1,14 @@
 # Application 1: Synthetic microbial communities
 ## Dataset 1: In Silico Bacterial Communities
-The data can be found in the folder ``experiments/Application_1+Dataset_1/data/``.
-The results can be found in the folder ``experiments/Application_1+Dataset_1/output/``
-### Usage
-within the Malab console, go to ``experiments/Application_1+Dataset_1/`` by
+We will illustrate our approach with a reduced number of communities. This data can be found in the folder ``experiments/Application_1+Dataset_1/data/``. The full dataset can be accessed via [FlowRepository (ID: FR-FCM-ZY6M)](https://flowrepository.org/experiments/1238). 
+Results using the full dataset can be found in the folder ``experiments/Application_1+Dataset_1/output/``
+
+### Example
+Download the repository, open the Malab console, and within the console go to ``experiments/Application_1+Dataset_1/`` by
 ```matlab
 cd experiments/Application_1+Dataset_1/
 ```
-A quick example:
+Next, run the following commands:
 ```matlab
 % configure the paths
 clear all
@@ -75,7 +76,8 @@ fprintf('2) Transfer settings:\n');
 fprintf('Euclidean = %.2f\n', mean(E_Y_hat==Y_te)*100);
 fprintf('DMLMJ = %.2f\n', mean(M_Y_hat==Y_te)*100);
 ```
-The output
+
+This gives the following output: 
 ```
 Classification accuracies of k-nearest-neighbor using
 1) Supervised settings:
@@ -87,7 +89,7 @@ Euclidean = 93.79
 DMLMJ = 98.61
 ```
 
-##### 1. Experiments on the raw data
+##### 1. Experiments using the full raw dataset
 Within the Malab console, run the following command
 ```matlab
 runExps(0)
@@ -100,8 +102,9 @@ We report the accuracies of the `k`-NN classifier using the Euclidean and the Ma
 the target community (10 microbial populations). Each row represents the results with respect to different values of ``T`` (number of microbial populations that was used to perform DMLMJ), which is increased from 2 to 10.
 - ``unsupervised.txt``: This corresponds the transfer DMLMJ settings. DMLMJ was applied using microbial populations of which none were part of the target communities. As the target communities contained ten bacterial populations, the remaining populations were used to determine the distance metric through DMLMJ for ``T`` from 2 to 10.
 
-We repeat the experiment 10 times to avoid the effect of randomness (in total 90 rows for each file).
-##### 2. Experiments on the transformed data
+10 different communities were created for a different species richness to avoid the effect of randomness (in total 90 rows for each file).
+
+##### 2. Experiments using the full transformed dataset
 The results of ``k``-NN classification on data transformed by ``f(x)=asinh(x)``. Within the Malab console, run the following command
 ```matlab
 runExps(1)
