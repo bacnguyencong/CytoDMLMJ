@@ -137,3 +137,4 @@ g.set_yticklabels(fontsize=14) #rotation=-90, ha='left'
 plt.savefig('V_CyTOF.eps',bbox_inches='tight', dpi=500)
 plt.show()
 ```
+[1] [Weber, L.M., and Robinson, M.D., "Comparison of clustering methods for high‐dimensional single‐cell flow and mass cytometry data". Cytometry Part A 89A: 1084-1096, 2016.](https://onlinelibrary.wiley.com/doi/abs/10.1002/cyto.a.23030)
