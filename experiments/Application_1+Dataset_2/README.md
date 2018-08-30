@@ -1,13 +1,14 @@
 # Application 1: Synthetic microbial communities
 ## Dataset 2: In Silico Autofluorescent Microbial Communities
-The data can be found in the folder ``experiments/Application_1+Dataset_2/data/``.
-The results can be found in the folder ``experiments/Application_1+Dataset_2/output/``
-### Usage
-within the Malab console, go to ``experiments/Application_1+Dataset_2/`` by
+We will illustrate our approach with a reduced number of communities. This data can be found in the folder ``experiments/Application_1+Dataset_2/data/``. The full dataset can be accessed via [FlowRepository (ID: FR-FCM-ZYLB)](https://flowrepository.org/experiments/1707). 
+Results using the full dataset can be found in the folder ``experiments/Application_1+Dataset_2/output/``
+
+### Example
+Download the repository, open the Malab console, and within the console go to ``experiments/Application_1+Dataset_2/`` by
 ```matlab
 cd experiments/Application_1+Dataset_2/
 ```
-A quick example:
+Next, run the following commands:
 ```matlab
 % configure the paths
 clear all
@@ -75,7 +76,8 @@ fprintf('2) Transfer settings:\n');
 fprintf('Euclidean = %.2f\n', mean(E_Y_hat==Y_te)*100);
 fprintf('DMLMJ = %.2f\n', mean(M_Y_hat==Y_te)*100);
 ```
-The output
+
+This gives the following output: 
 ```
 Classification accuracies of k-nearest-neighbor using
 1) Supervised settings:
@@ -86,7 +88,13 @@ DMLMJ = 80.15
 Euclidean = 93.75
 DMLMJ = 94.75
 ```
-##### 1. Experiments on the raw data
+### Using the full dataset
+
+First, download the dataset from FlowRepository, and transfer .fcs format to .csv. 
+
+_Warning_: Running DMLMJ for all 90 communities is going to take a while...
+
+##### 1. Using the full raw (=untransformed) dataset
 Within the Malab console, run the following command
 ```matlab
 runExps(0)
