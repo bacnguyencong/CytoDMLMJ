@@ -89,7 +89,13 @@ Euclidean = 93.79
 DMLMJ = 98.61
 ```
 
-##### 1. Experiments using the full raw dataset
+### Using the full dataset
+
+First, download the dataset from FlowRepository, and transfer .fcs format to .csv. 
+
+_Warning_: Running DMLMJ for all 90 communities is going to take a while...
+
+##### 1. Using the full raw (=untransformed) dataset
 Within the Malab console, run the following command
 ```matlab
 runExps(0)
@@ -104,7 +110,7 @@ the target community (10 microbial populations). Each row represents the results
 
 10 different communities were created for a different species richness to avoid the effect of randomness (in total 90 rows for each file).
 
-##### 2. Experiments using the full transformed dataset
+##### 2. Using the full transformed dataset
 The results of ``k``-NN classification on data transformed by ``f(x)=asinh(x)``. Within the Malab console, run the following command
 ```matlab
 runExps(1)
