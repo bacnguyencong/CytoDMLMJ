@@ -38,5 +38,5 @@ g.set_xlabels('t-SNE 1 (a.u.)', fontsize=16)
 g.set_ylabels('t-SNE 2 (a.u.)', fontsize=16)
 g.set_xticklabels(fontsize=14) #rotation=-90, ha='left'
 g.set_yticklabels(fontsize=14) #rotation=-90, ha='left'
-plt.savefig('Figures/TSNE_E_test.eps',bbox_inches='tight', dpi=500)
+plt.savefig('output/Figures/TSNE_test.eps',bbox_inches='tight', dpi=500)
 plt.show()
