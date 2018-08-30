@@ -30,9 +30,9 @@ The ``output`` folder contains two folders ``Euclidean`` and ``DMLMJ``, which ar
 - ``test.2.1.txt``: Train on the second and test on the first patient.
 
 #### 2. PhenoGraph analysis
-PhenoGraph was used to perform cluster analysis and evaluate the influence of DMLMJ. The python implementation of PhenoGraph was used, which can be downloaded and installed from this [repository](https://github.com/jacoblevine/PhenoGraph). The code has also been added to this repository, see directory [phenograph](). 
+PhenoGraph was used to perform cluster analysis and evaluate the influence of DMLMJ. The python implementation of PhenoGraph was used, which can be downloaded and installed from this [repository](https://github.com/jacoblevine/PhenoGraph). The code has also been added to this repository, see the directory [phenograph](https://github.com/bacnguyencong/CytoDMLMJ/tree/master/experiments/Application_2%2BDataset_2/phenograph). 
 
-Variables were incrementally added, in order to determine the optimal number of variables that is needed for clustering. Note that for this analysis, files are used which contain all of the variables (denoted with `_all` in the title). 
+Variables were incrementally added, in order to determine the optimal number of variables that is needed for clustering. At each iteration, PhenoGraph was applied, for which $k$ can be specified ($k = 30$ in this case. Note that for this analysis, files are used which contain all of the variables (denoted with `_all` in the title). In other words, we do _not_ use those files in which the number of variables was automatically determined through cross-validation. This code looks as follows, but can also be accessed using the file [phenograph_RFE.py]()https://github.com/bacnguyencong/CytoDMLMJ/blob/master/experiments/Application_2%2BDataset_2/phenograph_RFE.py. 
 
 ```python
 # Import packages
@@ -93,7 +93,7 @@ v_T.to_csv('output/PhenoGraph_results/v_patient1_TDMLMJ_k=' + str(k_) + '.csv')
 ```
 
 #### 3. Visualization of results
-Values reported in Table 1 are gathered from the files in [PhenoGraph_results_paper](). Fig. 5 can be generated using the script [plot_pheno.py](): 
+Values reported in Table 1 are gathered from the files in [PhenoGraph_results_paper](https://github.com/bacnguyencong/CytoDMLMJ/tree/master/experiments/Application_2%2BDataset_2/output/PhenoGraph_results_paper). Fig. 5 can be generated using the script [plot_pheno.py](https://github.com/bacnguyencong/CytoDMLMJ/blob/master/experiments/Application_2%2BDataset_2/plot_pheno.py): 
 
 ```python
 #Import packages
