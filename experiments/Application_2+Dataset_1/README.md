@@ -23,7 +23,7 @@ The ``output`` folder contains two folders ``Euclidean`` and ``DMLMJ``, which ar
 - ``test_all.txt``: The test data set after applying the linear transformation learned by DMLMJ (all variables are kept).
 
 #### 2. t-SNE
-This script can also be accessed via the file [tsne.py](). 
+This script can also be accessed via the file [tsne.py](https://github.com/bacnguyencong/CytoDMLMJ/blob/master/experiments/Application_2%2BDataset_1/tsne.py). 
 ```python
 #Import packages
 import pandas as pd
@@ -52,7 +52,7 @@ df_M_tsne.to_csv('output/TSNE/DMLMJ_test_TSNE.csv')
 ```
 
 ### Visualizing t-SNE Results 
-This script can also be accessed via the file [plot_tsne.py](). 
+This script can also be accessed via the file [plot_tsne.py](https://github.com/bacnguyencong/CytoDMLMJ/blob/master/experiments/Application_2%2BDataset_1/plot_tsne.py). 
 ```python 
 #import packages
 import matplotlib.pyplot as plt
