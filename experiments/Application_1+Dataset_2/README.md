@@ -8,7 +8,7 @@ Download the repository, open the Malab console, and within the console go to ``
 ```matlab
 cd experiments/Application_1+Dataset_2/
 ```
-Next, run the following commands:
+Next, run the following [demo](demo.m) script:
 ```matlab
 % configure the paths
 clear all
@@ -77,7 +77,7 @@ fprintf('Euclidean = %.2f\n', mean(E_Y_hat==Y_te)*100);
 fprintf('DMLMJ = %.2f\n', mean(M_Y_hat==Y_te)*100);
 ```
 
-This gives the following output: 
+This gives the following output (_results may vary depending on PC_): 
 ```
 Classification accuracies of k-nearest-neighbor using
 1) Supervised settings:
