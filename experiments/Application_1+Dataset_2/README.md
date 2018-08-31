@@ -1,6 +1,6 @@
 # Application 1: Synthetic microbial communities
 ## Dataset 2: In Silico Autofluorescent Microbial Communities
-We will illustrate our approach with a reduced number of communities. This data can be found in the folder ``experiments/Application_1+Dataset_2/data/``. The full dataset can be accessed via [FlowRepository (ID: FR-FCM-ZYLB)](https://flowrepository.org/experiments/1707). 
+We will illustrate our approach with a reduced number of communities. This data can be found in the folder ``experiments/Application_1+Dataset_2/data/``. The full dataset was originally published in [1] and can be accessed via [FlowRepository (ID: FR-FCM-ZYLB)](https://flowrepository.org/experiments/1707). 
 Results using the full dataset can be found in the folder ``experiments/Application_1+Dataset_2/output/``
 
 ### Example
@@ -134,3 +134,5 @@ All files have the same structure as in ``Experiments on the raw data``.
 ```bash
 python python_script.py
 ```
+### References
+[1] [Sgier, L., and Freimann, R. and Zupanic, A. and Kroll, A. "Flow cytometry combined with viSNE for the analysis of microbial biofilms and detection of microplastics" Nature Communications 7: 11587, 2016.](https://www.nature.com/articles/ncomms11587)

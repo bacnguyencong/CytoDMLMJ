@@ -1,6 +1,6 @@
 # Application 1: Synthetic microbial communities
 ## Dataset 1: In Silico Bacterial Communities
-We will illustrate our approach with a reduced number of communities. This data can be found in the folder ``experiments/Application_1+Dataset_1/data/``. The full dataset can be accessed via [FlowRepository (ID: FR-FCM-ZY6M)](https://flowrepository.org/experiments/1238). 
+We will illustrate our approach with a reduced number of communities. This data can be found in the folder ``experiments/Application_1+Dataset_1/data/``. The full dataset was originally published in [1] and can be accessed via [FlowRepository (ID: FR-FCM-ZY6M)](https://flowrepository.org/experiments/1238). 
 Results using the full dataset can be found in the folder ``experiments/Application_1+Dataset_1/output/``
 
 ### Example
@@ -136,3 +136,6 @@ All files have the same structure as in ``Experiments on the raw data``.
 ```bash
 python python_script.py
 ```
+
+### References
+[1] [Rubbens, P., and Props, R. and Garcia-Timermans, C. and Boon, N. and Waegeman, W. "Stripping flow cytometry: How many detectors do we need for bacterial identification?" Cytometry Part A 91A: 1184--1191, 2017.](https://onlinelibrary.wiley.com/doi/abs/10.1002/cyto.a.23284)

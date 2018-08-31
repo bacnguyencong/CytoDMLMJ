@@ -1,7 +1,7 @@
 # Application 2: Mass Cytometry
 DMLMJ was evaluated for CyTOF data.
 ### Dataset 1: 13-dimensional CyTOF Data
-Data originate from one healthy individual, in which bone marrow mast cells (BMMCs) were analyzed using a 13-color panel. Cell populations were labeled after manual gating using all markers; all markers were used for data analysis. This dataset as processed by [1] is publicly available on FlowRepository (ID:FR-FCM-ZZPH).
+Data originate from one healthy individual, in which bone marrow mast cells (BMMCs) were analyzed using a 13-color panel. Cell populations were labeled after manual gating using all markers; all markers were used for data analysis. This dataset as processed by [1] is publicly available on [FlowRepository (ID:FR-FCM-ZZPH)](https://flowrepository.org/experiments/817). 
 
 The data can be found in the folder ``experiments/Application_2+Dataset_1/data/``.
 The results can be found in the folder ``experiments/Application_2+Dataset_1/output/``
@@ -52,7 +52,7 @@ df_M_tsne.to_csv('output/TSNE/DMLMJ_test_TSNE.csv')
 ```
 
 ### Visualizing t-SNE Results 
-This script can also be accessed via the file [plot_tsne.py](https://github.com/bacnguyencong/CytoDMLMJ/blob/master/experiments/Application_2%2BDataset_1/plot_tsne.py). 
+Fig. 4 can be rendered using the following code. This script can also be accessed via the file [plot_tsne.py](https://github.com/bacnguyencong/CytoDMLMJ/blob/master/experiments/Application_2%2BDataset_1/plot_tsne.py). 
 ```python 
 #import packages
 import matplotlib.pyplot as plt
@@ -90,4 +90,4 @@ plt.savefig('Figures/TSNE_E_test.eps',bbox_inches='tight', dpi=500)
 plt.show()
 ```
 ### References
-[1] Weber, L.M., and Robinson, M.D., "Comparison of clustering methods for high‐dimensional single‐cell flow and mass cytometry data". Cytometry Part A 89A: 1084-1096, 2016. 
+[1] [Weber, L.M., and Robinson, M.D., "Comparison of clustering methods for high‐dimensional single‐cell flow and mass cytometry data". Cytometry Part A 89A: 1084-1096, 2016.](https://onlinelibrary.wiley.com/doi/abs/10.1002/cyto.a.23030)
