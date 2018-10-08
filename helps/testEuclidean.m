@@ -19,8 +19,14 @@ function [Acc, best_k] = testEuclidean(used_asinh, k, XTr, YTr, XTe, YTe, X, Y)
         XTr = asinh(XTr);
         XTe = asinh(XTe);
         % this corresponds to the unsupervised cases.
-        if (nargin > 6), X = asinh(X); end;
+        if (nargin > 6),
+            X = asinh(X);
+            [~, X] = normalizer(XTr, X);
+        end;
     end
+    
+    % normalize the data
+    [XTr, XTe] = normalizer(XTr, XTe);
 
     best_accuracy = -Inf;
     best_k = k;

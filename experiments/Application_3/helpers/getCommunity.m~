@@ -1,0 +1,31 @@
+function [XTr, YTr, XTe, YTe] = getCommunity(id_number)
+% get data set from community number #num
+% INPUT:
+%   num: the number of community
+% OUTPUT:
+%   XTr: examples by columns  (normalized)
+%   YTr: class labels
+    
+    % read data from two replicates
+    data = [sprintf('data/%d',id_number) '_data.csv'];
+    label = [sprintf('data/%d',id_number) '_label.csv'];
+    n
+    [X1, Y] = importingData(data, label, 20000);
+    
+    % get 5000 examples for training and other 5000 for testing
+    XTr = X1(1:5000,   :)';
+    XTe = X1(5001:end, :)';
+    
+    % add labels to the data
+    YTr = Y(1:5000);
+    YTe = Y(5001:end);
+end
+
+function [X, Y] = importingData(data, label, len)
+% randomly subsampling the data
+    rp = randperm(len);
+    X  = importdata(data);
+    Y  = importdata(label);
+    X  = X(rp(1:len), :);
+    Y  = Y(rp(1:len));
+end

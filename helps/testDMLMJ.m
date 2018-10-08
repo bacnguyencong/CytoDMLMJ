@@ -19,8 +19,14 @@ function [Acc, best_k] = testDMLMJ(used_asinh, k, XTr, YTr, XTe, YTe, X, Y)
         XTr = asinh(XTr);
         XTe = asinh(XTe);
         % this corresponds to the unsupervised cases.
-        if (nargin > 6), X = asinh(X); end;
-    end   
+        if (nargin > 6),
+            X = asinh(X);
+            [~, X] = normalizer(XTr, X);
+        end;
+    end
+    
+    % normalize the data
+    [XTr, XTe] = normalizer(XTr, XTe);  
     
     % initial values
     best_accuracy = -Inf;
