@@ -7,26 +7,28 @@ function [XTr, YTr, XTe, YTe] = getCommunity(id_number)
 %   YTr: class labels
     
     % read data from two replicates
-    data = [sprintf('data/%d',id_number) '_data.csv'];
-    label = [sprintf('data/%d',id_number) '_label.csv'];
+    data = [sprintf('data/Samples/Samples%d',id_number) '_CD.csv'];
+    label = [sprintf('data/Labels/Labels%d',id_number) '_label.csv'];
     
-    num_samples = 10000;
-    [X, Y] = importingData(data, label, num_samples);
+    num_samples = 40000;
+    [X, Y, num_samples] = importingData(data, label, num_samples);
     
-    % get 5000 examples for training and other 5000 for testing
-    XTr = X(1:num_samples/2,:)';
-    YTr = Y(1:num_samples/2);
+
+    % get 20000 examples for training and other 20000 for testing
+    XTr = X(1:ceil(num_samples/2),:)';
+    YTr = Y(1:ceil(num_samples/2));
     
-    XTe = X(num_samples/2+1:end, :)';
-    YTe = Y(num_samples/2+1:end);
+    XTe = X(ceil(num_samples/2)+1:end, :)';
+    YTe = Y(ceil(num_samples/2)+1:end);
 end
 
-function [X, Y] = importingData(data, label, len)
+function [X, Y, len] = importingData(data, label, len)
 % randomly subsampling the data
-    rp = randperm(len);
     X  = importdata(data);
-    X  = X(2:end,:); % delete the first row
     Y  = importdata(label);
+    Y = Y.data;
+    len = min(len, length(Y));    
+    rp = randperm(len);
     X  = X(rp(1:len), :);
     Y  = Y(rp(1:len));
 end

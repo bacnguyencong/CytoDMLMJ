@@ -86,4 +86,6 @@ function [Acc, best_k] = testDMLMJ(used_asinh, k, XTr, YTr, XTe, YTe, X, Y)
     fprintf('\n--------------------------------------\n');
     fprintf('DMLMJ Accuracy=%.2f, k = %d\n', Acc, best_k);
     fprintf('--------------------------------------\n');
+    
+    
 end
