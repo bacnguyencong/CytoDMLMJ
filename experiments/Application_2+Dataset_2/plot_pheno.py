@@ -15,19 +15,19 @@ import seaborn as sns
 sns.set_style("ticks")
 
 #Read in output
-v_I1_M = pd.read_csv('output/Phenograph_results_paper/v_patient1_M_k=30.csv', index_col=0, header=None)
+v_I1_M = pd.read_csv('output/PhenoGraph_results_paper/v_patient1_M_k=30.csv', index_col=0, header=None)
 v_I1_M.loc[:,'D'] = np.arange(1,33)
 v_I1_M['ID'] = '1'
 v_I1_M['method'] = 'DMLMJ'
-v_I1_TM = pd.read_csv('output/Phenograph_results_paper/v_patient1_TM_k=30.csv', index_col=0, header=None)
+v_I1_TM = pd.read_csv('output/PhenoGraph_results_paper/v_patient1_TM_k=30.csv', index_col=0, header=None)
 v_I1_TM.loc[:,'D'] = np.arange(1,33)
 v_I1_TM['ID'] = '1'
 v_I1_TM['method'] = 'T-DMLMJ'
-v_I2_M = pd.read_csv('output/Phenograph_results_paper/v_patient2_M_k=30.csv', index_col=0, header=None)
+v_I2_M = pd.read_csv('output/PhenoGraph_results_paper/v_patient2_M_k=30.csv', index_col=0, header=None)
 v_I2_M.loc[:,'D'] = np.arange(1,33)
 v_I2_M['ID'] = '2'
 v_I2_M['method'] = 'DMLMJ'
-v_I2_TM = pd.read_csv('output/Phenograph_results_paper/v_patient2_TM_k=30.csv', index_col=0, header=None)
+v_I2_TM = pd.read_csv('output/PhenoGraph_results_paper/v_patient2_TM_k=30.csv', index_col=0, header=None)
 v_I2_TM.loc[:,'D'] = np.arange(1,33)
 v_I2_TM['ID'] = '2'
 v_I2_TM['method'] = 'T-DMLMJ'
