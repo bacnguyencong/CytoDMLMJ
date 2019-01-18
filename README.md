@@ -27,7 +27,7 @@ DMLMJ can be used to find an optimal form of the Mahalanobis distance metric, wh
 
 
 ### Prerequisites
-DMLMJ has been tested using MATLAB 2010A and later on Windows and Linux (Mac should be fine).
+DMLMJ has been tested using MATLAB 2010A and later on Windows and Linux (Mac should be fine). A python implementation of DMLMJ can be found [here](https://github.com/jlsuarezdiaz/pyDML).
 
 ## Installation of DMLMJ
 Download the folder "DMLMJ" into the directory of your choice. Then within MATLAB go to file >> Set path... and add the directory containing "DMLMJ" to the list (if it isn't already). That's it.
