@@ -12,17 +12,18 @@ Data analysis techniques for the automated identification of cell populations ar
 * Original codes to run `DMLMJ` can be found as well in the directory [algorithms/DMLMJ](https://github.com/bacnguyencong/CytoDMLMJ/tree/master/algorithms/DMLMJ). 
 
 ## Datasets:
-Four different datasets were used. Links and FlowRepository IDs to original publications are the following: 
+Five different datasets were used. Links and FlowRepository IDs to original publications are the following: 
 * [Rubbens et al. 2017](https://onlinelibrary.wiley.com/doi/abs/10.1002/cyto.a.23284) (FlowRepository ID: FR-FCM-ZY6M),
 * [Sgier et al. 2016](https://www.nature.com/articles/ncomms11587) (FlowRepository ID: FR-FCM-ZYLB), 
 * [Levine_13dim](http://science.sciencemag.org/content/332/6030/687.long) data used as presented by the benchmark study by [Weber et al. 2016](https://onlinelibrary.wiley.com/doi/abs/10.1002/cyto.a.23030) (FlowRepository ID: FR-FCM-ZZPH),
-* [Levine_32dim](https://www.cell.com/cell/abstract/S0092-8674(15)00637-6) data used as presented by the benchmark study by [Weber et al. 2016](https://onlinelibrary.wiley.com/doi/abs/10.1002/cyto.a.23030) (FlowRepository ID: FR-FCM-ZZPH). 
+* [Levine_32dim](https://www.cell.com/cell/abstract/S0092-8674(15)00637-6) data used as presented by the benchmark study by [Weber et al. 2016](https://onlinelibrary.wiley.com/doi/abs/10.1002/cyto.a.23030) (FlowRepository ID: FR-FCM-ZZPH).
+* [HMIS-2](https://www.cell.com/immunity/abstract/S1074-7613%2816%2930143-1) data used as presented by the recent study of [Abdelaal et al. 2018](https://www.biorxiv.org/content/10.1101/316034v1) (FlowRepository ID: FR-FCM-ZYRM). 
 
 ## Example on CyTOF data: 
-DMLMJ can be used to find an optimal form of the Mahalanobis distance metric, which is a generalization of the commonly used Euclidean distance metric. The influence of DMLMJ on downstream multivariate analysis using for example t-SNE can be checked. Below an example is given for the Levine_13dim dataset, to which t-SNE was applied in Euclidean (left) and DMLMJ-transformed (right) space. 
+DMLMJ can be used to find an optimal form of the Mahalanobis distance metric, which is a generalization of the commonly used Euclidean distance metric. The incorporation of such a distance metric improves cell identification, using both $k$-NN classification and automated clustering. An example is given for different CyTOF-datasets for the PhenoGraph algorithm with incorporation of a Mahalanobis distance metric (DMLMJ), incorporation of a Mahalanobis distance metric derived from related samples (transfer DMLMJ or T-DMLMJ) or by making use of the Euclidean distance metric. 
 
 <p align="center">
-  <img src="./figs/TSNE_13_test.png" width="700"/>
+  <img src="./figs/V-measure.png" width="700"/>
 </p>
 
 
