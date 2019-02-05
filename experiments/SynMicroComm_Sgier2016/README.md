@@ -1,12 +1,12 @@
 # Application 1: Synthetic microbial communities
-## Dataset 2: In Silico Autofluorescent Microbial Communities
-We will illustrate our approach with a reduced number of communities. This data can be found in the folder ``experiments/Application_1+Dataset_2/data/``. The full dataset was originally published in [1] and can be accessed via [FlowRepository (ID: FR-FCM-ZYLB)](https://flowrepository.org/experiments/1707). 
+## Dataset 2: Sgier et al., 2016
+We will illustrate our approach with a reduced number of communities. This data can be found in the folder ``experiments/SynMicroComm_Sgier2016/data/``. The full dataset was originally published in [1] and can be accessed via [FlowRepository (ID: FR-FCM-ZYLB)](https://flowrepository.org/experiments/1707). 
 Results using the full dataset can be found in the folder ``experiments/Application_1+Dataset_2/output/``
 
 ### Example
-Download the repository, open the Malab console, and within the console go to ``experiments/Application_1+Dataset_2/`` by
+Download the repository, open the Malab console, and within the console go to ``experiments/SynMicroComm_Sgier2016/`` by
 ```matlab
-cd experiments/Application_1+Dataset_2/
+cd experiments/SynMicroComm_Sgier2016/
 ```
 Next, run the following [demo](demo.m) script:
 ```matlab
