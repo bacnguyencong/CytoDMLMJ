@@ -23,7 +23,7 @@ Five different datasets were used. Links and FlowRepository IDs to original publ
 DMLMJ can be used to find an optimal form of the Mahalanobis distance metric, which is a generalization of the commonly used Euclidean distance metric. The incorporation of such a distance metric improves cell identification, using both $k$-NN classification and automated clustering. An example is given for different CyTOF-datasets for the PhenoGraph algorithm with incorporation of a Mahalanobis distance metric (DMLMJ), incorporation of a Mahalanobis distance metric derived from related samples (transfer DMLMJ or T-DMLMJ) or by making use of the Euclidean distance metric. 
 
 <p align="center">
-  <img src="./figs/V-measure.png" width="700"/>
+  <img src="./figs/V-measure.png" width="350"/>
 </p>
 
 
