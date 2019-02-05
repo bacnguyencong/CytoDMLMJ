@@ -19,28 +19,28 @@ def report_to_df(report):
     report_df = pd.read_csv(StringIO("Classes" + report), sep=' ', index_col=0)        
     return(report_df)
 
-df_13_E = pd.read_table('Application_2+Dataset_1/output/Classification_report/Levine_13_E_cr.csv', sep=',', index_col=None, header=0)
+df_13_E = pd.read_table('CyTOF_Levine13dim/output/Classification_report/Levine_13_E_cr.csv', sep=',', index_col=None, header=0)
 df_13_E['Method'] = 'Euclidean'
 df_13_E['Dataset'] = 'Levine_13dim'
 mean_13_E = df_13_E.iloc[:-1,:].mean()
-df_32_E = pd.read_table('Application_2+Dataset_2/output/Classification_report/cr_E.csv', sep=',', index_col=None, header=0)
+df_32_E = pd.read_table('CyTOF_Levine32dim/output/Classification_report/cr_E.csv', sep=',', index_col=None, header=0)
 df_32_E['Method'] = 'Euclidean'
 df_32_E['Dataset'] = 'Levine_32dim'
 mean_32_E = df_32_E.iloc[:-1,:].mean()
-df_hmis_E = pd.read_csv('Application_3/data/Classification_report/cr_M.csv', index_col=0, header=0)
+df_hmis_E = pd.read_csv('CyTOF_HMIS2/data/Classification_report/cr_M.csv', index_col=0, header=0)
 df_hmis_E['Method'] = 'Euclidean'
 df_hmis_E['Dataset'] = 'HMIS-2'
 mean_hmis_E = df_hmis_E.iloc[:-1,:].mean()
 
-df_13_M = pd.read_table('Application_2+Dataset_1/output/Classification_report/Levine_13_M_cr.csv', sep=',', index_col=None, header=0)
+df_13_M = pd.read_table('CyTOF_Levine13dim/output/Classification_report/Levine_13_M_cr.csv', sep=',', index_col=None, header=0)
 df_13_M['Method'] = 'DMLMJ'
 df_13_M['Dataset'] = 'Levine_13dim'
 mean_13_M = df_13_M.iloc[:-1,:].mean()
-df_32_M = pd.read_table('Application_2+Dataset_2/output/Classification_report/cr_M.csv', sep=',', index_col=None, header=0)
+df_32_M = pd.read_table('CyTOF_Levine32dim/output/Classification_report/cr_M.csv', sep=',', index_col=None, header=0)
 df_32_M['Method'] = 'DMLMJ'
 df_32_M['Dataset'] = 'Levine_32dim'
 mean_32_M = df_32_M.iloc[:-1,:].mean()
-df_hmis_M = pd.read_csv('Application_3/data/Classification_report/cr_M.csv', index_col=0, header=0)
+df_hmis_M = pd.read_csv('CyTOF_HMIS2/data/Classification_report/cr_M.csv', index_col=0, header=0)
 df_hmis_M['Method'] = 'DMLMJ'
 df_hmis_M['Dataset'] = 'HMIS-2'
 mean_hmis_M = df_hmis_M.iloc[:-1,:].mean()
