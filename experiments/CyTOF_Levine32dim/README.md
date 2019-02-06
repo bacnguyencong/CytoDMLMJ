@@ -3,38 +3,31 @@ DMLMJ was evaluated for CyTOF data.
 ### Dataset 2: 32-dimensional CyTOF Data
 Data originate from two healthy individuals, in which bone marrow mast cells (BMMCs) were analyzed using a 32-color panel. Cell populations were labeled after manual gating using all markers; all markers were used for data analysis. This dataset as processed by [1] is publicly available on [FlowRepository (ID: ID: FR-FCM-ZZPH)](https://flowrepository.org/experiments/817). 
 
-The data can be found in the folder ``experiments/Application_2+Dataset_2/data/``.
-The results can be found in the folder ``experiments/Application_2+Dataset_2/output/``
+The data can be found in the folder ``experiments/CyTOF_Levine32dim/data/``.
+The results can be found in the folder ``experiments/CyTOF_Levine32dim/output/``
 ### Usage
 #### 1. Run experiments
-within the Malab console, go to ``experiments/Application_2+Dataset_2/`` by
+within the Malab console, go to ``experiments/CyTOF_Levine32dim/`` by
 ```matlab
-cd experiments/Application_2+Dataset_2/
+cd experiments/CyTOF_Levine32dim/
 ```
 and run the command
 ```matlab
 runExps()
 ```
 The ``output`` folder contains two folders ``Euclidean`` and ``DMLMJ``, which are the output files of `k`-NN classifier using the Euclidean and DMLMJ, respectively. 
-- ``train.1.txt``:  The training data set (the last column corresponds to the labels) of patient ID1. For DMLMJ, the data are transformed using the learned transformation ``L``.
-- ``train.2.txt``:  The training data set (the last column corresponds to the labels) of patient ID2. For DMLMJ, the data are transformed using the learned transformation ``L``.
-- ``test.1.txt``: The test data set (the last column corresponds to the labels) of patient ID1. For DMLMJ, the data are transformed using the learned transformation ``L``.
-- ``test.2.txt``: The test data set (the last column corresponds to the labels) of patient ID2. For DMLMJ, the data are transformed using the learned transformation ``L``.
-- ``prediction.1.txt``: A file contains two columns that represent the predicted labels and the true labels, respectively (with patient ID1).
-- ``prediction.2.txt``: A file contains two columns that represent the predicted labels and the true labels, respectively (with patient ID2).
-- ``train_all.1.txt``: The training data set after applying the linear transformation learned by DMLMJ (all variables are kept, patient ID1).
-- ``train_all.2.txt``: The training data set after applying the linear transformation learned by DMLMJ (all variables are kept, patient ID2).
-- ``test_all.1.txt``: The test data set after applying the linear transformation learned by DMLMJ (all variables are kept, patient ID1).
-- ``test_all.2.txt``: The test data set after applying the linear transformation learned by DMLMJ (all variables are kept, patient ID2).
-- ``test.1.2.txt``: Train on the first and test on the second patient.
-- ``test.2.1.txt``: Train on the second and test on the first patient.
+- ``train.txt``:  The training data set (the last column corresponds to the labels). For DMLMJ, the data are transformed using the learned transformation ``L``.
+- ``test.txt``: The test data set (the last column corresponds to the labels). For DMLMJ, the data are transformed using the learned transformation ``L``.
+- ``prediction.txt``: A file contains two columns that represent the predicted labels and the true labels, respectively.
+- ``train_all.txt``: The training data set after applying the linear transformation learned by DMLMJ (all variables are kept).
+- ``test_all.txt``: The test data set after applying the linear transformation learned by DMLMJ (all variables are kept).
 
 #### 2. PhenoGraph analysis
-PhenoGraph was used to perform cluster analysis and evaluate the influence of DMLMJ. The python implementation of PhenoGraph was used, which can be downloaded and installed from this [repository](https://github.com/jacoblevine/PhenoGraph). The code has also been added to this repository, see the directory [phenograph](https://github.com/bacnguyencong/CytoDMLMJ/tree/master/experiments/Application_2%2BDataset_2/phenograph). 
+PhenoGraph was used to perform cluster analysis and evaluate the influence of DMLMJ. The python implementation of PhenoGraph was used, which can be downloaded and installed from this [repository](https://github.com/jacoblevine/PhenoGraph). The code has also been added to this repository, see the directory [phenograph](https://github.com/bacnguyencong/CytoDMLMJ/tree/master/experiments/CyTOF_Levine32dim/phenograph). 
 
-Variables were incrementally added, in order to determine the optimal number of variables that is needed for clustering. At each iteration, PhenoGraph was applied, for which $k$ can be specified ($k = 30$ in this case. Note that for this analysis, files are used which contain all of the variables (denoted with `_all` in the title). In other words, we do _not_ use those files in which the number of variables was automatically determined through cross-validation. This code looks as follows, but can also be accessed using the file [phenograph_RFE.py](https://github.com/bacnguyencong/CytoDMLMJ/blob/master/experiments/Application_2%2BDataset_2/phenograph_RFE.py). 
+Variables were incrementally added, in order to determine the optimal number of variables that is needed for clustering. At each iteration, PhenoGraph was applied, for which $k$ can be specified ($k = 30$ in this case. Note that for this analysis, files are used which contain all of the variables (denoted with `_all` in the title). In other words, we do _not_ use those files in which the number of variables was automatically determined through cross-validation. This code looks as follows, but can also be accessed using the file [phenograph_RFE.py](https://github.com/bacnguyencong/CytoDMLMJ/tree/master/experiments/CyTOF_Levine32dim/phenograph_RFE.py). 
 
-_Note_: PhenoGraph algorithm at this stage does not allow to specify a seed. We will implement this shortly. Results are quite stable, but to generate the figures in the paper, please use the files in the directory [PhenoGraph_results_paper](https://github.com/bacnguyencong/CytoDMLMJ/tree/master/experiments/Application_2%2BDataset_2/output/PhenoGraph_results_paper). 
+_Note_: PhenoGraph algorithm at this stage does not allow to specify a seed. We will implement this shortly. Results are quite stable, but to generate the figures in the paper, please use the files in the directory [PhenoGraph_results_paper](https://github.com/bacnguyencong/CytoDMLMJ/tree/master/experiments/CyTOF_Levine32dim/output/PhenoGraph_results_paper). 
 
 ```python
 # Import packages
