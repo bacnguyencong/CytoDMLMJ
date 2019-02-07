@@ -1,7 +1,7 @@
 # Mass Cytometry
 DMLMJ was evaluated for HMIS-2 data.  
 ### Dataset 3: HMIS-2
-The HMIS-2 dataset, studying the Human Mucosal Immune System (HMIS), originates from 47 individuals, in which peripheral blood mononuclear cells (PBMCs) were analyzed through CyTOF using a 28-color panel. The dataset was originally published in [1]. This data set is publicly available on [FlowRepository (ID: ?)](?). First we only looked at samples diagnosed with Crohn's Disease (CD, $n = 14$).
+The HMIS-2 dataset, studying the Human Mucosal Immune System (HMIS), originates from 47 individuals, in which peripheral blood mononuclear cells (PBMCs) were analyzed through CyTOF using a 28-color panel. The dataset was originally published in [1]. This data set is publicly available on [FlowRepository (ID:FR-FCM-ZYRM)](https://flowrepository.org/experiments/1910). First we only looked at samples diagnosed with Crohn's Disease (CD, $n = 14$).
 
 The data can be found in the folder ``experiments/CyTOF_HMIS2/data/``.
 The results can be found in the folder ``experiments/CyTOF_HMIS2/output/``
