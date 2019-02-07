@@ -18,6 +18,9 @@ runExps()
 
 Cells were clustered using the Euclidean distance metric or using DMLMJ. These files can be found in ``experiments/CyTOF_HMIS2/output/CD/Euclidean/`` and ``experiments/CyTOF_HMIS2/output/CD/DMLMJ/`` respectively. The latter contains samples denoted by $i.j$, in which $i$ denotes the sample ID which was used for DMLMJ to next quantify distances of cells in sample $j$. Scripts to cluster all samples individually are ``phenograph_E.py` and ``phenograph_DMLMJ.py``. Scripts are also added to visualize figures [4A and B](https://github.com/bacnguyencong/CytoDMLMJ/blob/master/experiments/CyTOF_HMIS2/plot_heatmap.py) and [4C](https://github.com/bacnguyencong/CytoDMLMJ/blob/master/experiments/CyTOF_HMIS2/plot_N_clusters.py).
 
+### Meta-analysis
+A meta-analysis of the CD samples and control (CTRL) samples was performed in order to assess whether DMLMJ improved the statistical power of a disease vs control state. Results and scripts can be found in the folder [``output/CD_vs_CTRL``](https://github.com/bacnguyencong/CytoDMLMJ/tree/master/experiments/CyTOF_HMIS2/output/CD_vs_CTRL). 
+
 An example to determine cell populations using PhenoGraph for $i = 3$ and $j = 5$ after DMLMJ, is as follows: 
 
 ```python 
