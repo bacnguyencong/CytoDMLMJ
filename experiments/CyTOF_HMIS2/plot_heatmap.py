@@ -11,8 +11,8 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 
-df_dmlmj_cv = pd.read_csv('data/CD/V_k=30_CV.csv', index_col=0, header=0)
-df_e = pd.read_csv('data/CD/V_k=30_E.csv', index_col=0, header=0)
+df_dmlmj_cv = pd.read_csv('output/CD/V_k=30_CV.csv', index_col=0, header=0)
+df_e = pd.read_csv('output/CD/V_k=30_E.csv', index_col=0, header=0)
 df_e.columns = ['E']
 df = pd.concat([df_dmlmj_cv,df_e], axis=1, ignore_index=False)
 
