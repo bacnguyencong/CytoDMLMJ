@@ -57,6 +57,6 @@ n_clusters = pd.DataFrame(n_clusters,index=np.arange(1,15), columns=np.arange(1,
 ari.to_csv('output/CD/ARI_k='+str(k_)+'_CV_rerun.csv')
 v.to_csv('output/CD/V_k='+str(k_)+'_CV_rerun.csv')
 n_clusters.to_csv('output/CD/N_clusters_k='+str(k_)+'_CV_rerun.csv')
-
+```
 ### References
 [1] [V. van Unen, N. Li, I. Molendijk, M. Temurhan, T. Höllt, A. E., van der Meulen-de Jong, H. W. Verspaget, M. L. Mearin, C. J., Mulder, J. van Bergen, B. P. Lelieveldt, F. Koning. "Mass Cytometry of the Human Mucosal Immune System Identifies Tissue- and Disease-Associated Immune Subsets", Immunity 44 (5) (2016) 1227–1239](https://www.cell.com/immunity/fulltext/S1074-7613(16)30143-1)
